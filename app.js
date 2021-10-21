@@ -21,6 +21,7 @@ app.use((req, res, next) => {
     next();
 })
 localStorage = new LocalStorage('./scratch');
+const port = process.env.PORT || 3000
 
 
 //Middlewares 
@@ -113,7 +114,7 @@ app.get("/produtos", (req, res) => {
 
 
 
-app.listen(8081, () => {
-    console.log("Rodando servidor na porta 8081");
+app.listen(port, () => {
+    console.log("Rodando servidor na porta " + port);
 })
 module.exports = { axios, Bcrypt }
