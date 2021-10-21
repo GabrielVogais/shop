@@ -1,0 +1,123 @@
+<!-- Navigation -->
+{{>menu}}
+<!-- Cart Items -->
+<div class="container-md cart">
+    <table>
+        <tr>
+            <th>Produto</th>
+            <th>Quantidade</th>
+            <th>Total</th>
+        </tr>
+        {{#each produtos}}
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img class="photo" src={{path}} alt="">
+                    <div>
+                        <p>{{name}}</p>
+                        <span>Preço: R$ {{price}}</span>
+                        <br />
+                        <div class="box-trash">
+                            <i class="fas fa-trash"></i>
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="box-line">
+                    <h5><i class="fas fa-minus-circle"></i></h5>
+                    <h4>{{qtde}}</h4>
+                    <h5><i class="fas fa-plus-circle"></i></h5>
+                </div>
+            </td>
+            <td>R$ {{multiply price qtde}} </td>
+        </tr>
+        {{else}}
+        {{/each}}
+        <h1>Produtos</h1>
+        <div class="total-price">
+            <table>
+                <tr>
+                    <td>Subtotal</td>
+                    <td>$200</td>
+                </tr>
+                <tr>
+                    <td>Tax</td>
+                    <td>$50</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td>$250</td>
+                </tr>
+            </table>
+            <a href="#" class="checkout btn">Proceed To Checkout</a>
+
+        </div>
+
+</div>
+
+
+
+<!-- Footer -->
+<footer id="footer" class="section footer">
+    <div class="container">
+        <div class="footer-container">
+            <div class="footer-center">
+                <h3>EXTRAS</h3>
+                <a href="#">Brands</a>
+                <a href="#">Gift Certificates</a>
+                <a href="#">Affiliate</a>
+                <a href="#">Specials</a>
+                <a href="#">Site Map</a>
+            </div>
+            <div class="footer-center">
+                <h3>INFORMATION</h3>
+                <a href="#">About Us</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Site Map</a>
+            </div>
+            <div class="footer-center">
+                <h3>MY ACCOUNT</h3>
+                <a href="#">My Account</a>
+                <a href="#">Order History</a>
+                <a href="#">Wish List</a>
+                <a href="#">Newsletter</a>
+                <a href="#">Returns</a>
+            </div>
+            <div class="footer-center">
+                <h3>CONTACT US</h3>
+                <div>
+                    <span>
+                        <i class="fas fa-map-marker-alt"></i>
+                    </span>
+                    42 Dream House, Dreammy street, 7131 Dreamville, USA
+                </div>
+                <div>
+                    <span>
+                        <i class="far fa-envelope"></i>
+                    </span>
+                    company@gmail.com
+                </div>
+                <div>
+                    <span>
+                        <i class="fas fa-phone"></i>
+                    </span>
+                    456-456-4512
+                </div>
+                <div>
+                    <span>
+                        <i class="far fa-paper-plane"></i>
+                    </span>
+                    Dream City, USA
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</footer>
+<script>
+
+</script>
+<!-- End Footer -->
